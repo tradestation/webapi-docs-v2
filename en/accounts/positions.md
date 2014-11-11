@@ -4,6 +4,7 @@ title: Positions
 category: accounts
 permalink: positions/
 weight: 2
+version: 2.4
 ---
 
 ### Summary

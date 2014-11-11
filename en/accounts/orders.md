@@ -4,6 +4,7 @@ title: Orders
 category: accounts
 permalink: orders/
 weight: 3
+version: 2.4
 ---
 
 ### Summary
@@ -39,6 +40,7 @@ Example orders request that filters results for symbol = AAPL
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
@@ -63,7 +65,7 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
     Date: Wed, 05 Jan 2011 18:11:17 GMT
     
     [{
-        "AccountID": "QA",
+        "AccountID": "11111QA",
         "AdvancedOptions": "",
         "AssetType": "OP",
         "CommissionFee": 0.0000,
@@ -119,7 +121,7 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
         "TriggeredBy": "",
         "Type": "Buy to Open"
     }, {
-        "AccountID": "QA",
+        "AccountID": "11111QA",
         "AdvancedOptions": "",
         "AssetType": "EQ",
         "CommissionFee": 1.0000,
@@ -173,17 +175,47 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
         "TimeStamp": "8\/3\/2011 2:02:10 PM",
         "TriggeredBy": "",
         "Type": "Buy"
+    }]  
+  
+  
+  
+Example Response Japanese Equities ([Order Detail](../../objects/order-detail) object details)
+  
+
+    HTTP/1.1 200 OK
+    Cache-Control: private
+    Content-Length: 1029
+    Content-Type: application/JSON; charset=utf-8
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 4.0.30319
+    X-Powered-By: ASP.NET
+    Date: Wed, 05 Jan 2011 18:11:17 GMT
+    
+    [{
+        "AccountID": "JPEQ11111",
+        "AdvancedOptions": "",
+        "AssetType": "EQ",
+        "CommissionFee": 1.0000,
+        "Country": null,
+        "Duration": "Market",
+        "ExecuteQuantity": 10,
+        "FilledCanceled": "8\/3\/2014 2:04:20 PM",
+        "FilledPriceText": "1.6300000000",
+        "LimitPriceText": "10.0000000000",
+        "OrderID": 207885335,
+        "Originator": 543061,
+        "Quantity": 10,
+        "QuantityLeft": 0,
+        "Routing": "Intelligent",
+        "Spread": "",
+        "Status": "FLL",
+        "StopPriceText": "0",
+        "Symbol": "JP:8698-TS",
+        "TimeStamp": "8\/3\/2014 2:02:10 PM",
+        "TriggeredBy": "",
+        "Type": "Buy",
+        "FundSource": "Cash",
+        "LotSelectionStrategy": "Fifo",
+        "TaxationMethod": "Non-Tokutei"
     }]
 
-### Possible Order States
-
-* OPN, ACK, UCN = Open Orders
-* FLL, FLP = Filled Orders
-* FPR = Partially Filled Orders
-* OUT = Canceled Orders
-* REJ, TSC = Rejected Orders
-* EXP = Expired Orders
-* BRO = Broken Orders
-* CAN = Exch. Canceled Orders
-* LAT = Too Late Orders
-* DON = Queued Orders

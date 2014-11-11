@@ -4,6 +4,7 @@ title: Get User Accounts
 category: users
 permalink: accounts/
 weight: 1
+tags: JPEQ
 ---
 
 ### Summary
@@ -49,23 +50,29 @@ Example Response: ([Account Info](../../objects/account-info) object details)
     Date: Thu, 06 Jan 2011 17:21:43 GMT
     
     [{
-        "Key": 987654,
+        "Key": "987654",
         "Name": "9876543 MyName",
         "Type": "C",
         "TypeDescription": "Cash"
     }, {
-        "Key": 876543,
+        "Key": "876543",
         "Name": "8765432 MyName",
         "Type": "M",
         "TypeDescription": "Margin"
     }, {
-        "Key": 765432,
+        "Key": "765432",
         "Name": "7654321 MyName",
         "Type": "F",
         "TypeDescription": "Futures"
     }, {
-        "Key": 654321,
+        "Key": "654321",
         "Name": "FX6543210 MyName",
         "Type": "X",
         "TypeDescription": "Forex"
+
+    }, {
+        "Key": "6543210",
+        "Name": "JPEQ6543210 MyName",
+        "Type": "J",
+        "TypeDescription": "JPEQ"
     }]

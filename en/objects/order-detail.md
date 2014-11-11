@@ -3,39 +3,43 @@ layout: en
 title: Order Detail
 category: objects
 permalink: order-detail/
+tags: JPEQ
 ---
 
-| Field | Type | Description |
-| ----- | ---- | ----------- |
-| AccountID | string | |
-| AdvancedOptions | string | For Conditional Orders … Relation Identifier |
-| Alias | string | User defined name |
-| CommissionFee | decimal | |
-| ContractExpireDate | string | Expiration date in UTC formatted time. |
-| ConversionRate | decimal | |
-| Country | string | |
-| Denomination | string | Currency security is traded in |
-| DisplayName | string | Set to Alternate ID if it exists otherwise will be the TradeStation Account ID |
-| Duration | string | FX - DAY, FU - |
-| ExecuteQuantity | integer | Quantity executed for order |
-| FilledCanceled | string | Time that order was filled, cancelled, or rejected |
-| FilledPriceText | string | FilledPrice with decimal precision applied |
-| GroupName | string | For Conditional Orders |
-| Legs | [Leg](../leg/) | |
-| LimitPriceText | string | LimitPrice with decimal precision applied |
-| OrderID | integer | |
-| OrderConfirmId | string | Not Required, enables detecting duplicate orders.  Must be 25-char max length and unique for API Key, user, and order |
-| Originator | integer | FDCN Id of the user that placed the order |
-| Quantity | integer | Quantity of shares in the order |
-| QuantityLeft | integer | Quantity remaining to execute on order |
-| Routing | string | Route order was done |
-| Spread | string | |
-| Status | string | Status of Order, [described below](#order_status_categories) |
-| StopPriceText | string | StopPrice with decimal precision applied |
-| Symbol | string | |
-| TimeStamp | string, M/D/YYYY h:m:s tt | Time in UTC/GMT that order was placed |
-| TriggeredBy | string | For Conditional Orders |
-| Type | string | Buy, Sell, Buy to Close, Buy to Open, Sell to Open, Sell To Close, Buy To Cover, Sell to Short |
+| Field | Type | Description | Brand |
+| ----- | ---- | ----------- | ----- |
+| AccountID | string | The account for which this order was placed | |
+| AdvancedOptions | string | For Conditional Orders … Relation Identifier | |
+| Alias | string | User defined name | |
+| CommissionFee | decimal | Commissions charged for this order | |
+| ContractExpireDate | string | Expiration date in UTC formatted time. | |
+| ConversionRate | decimal | | |
+| Country | string | The Country Code this order was placed in | |
+| Denomination | string | Currency security is traded in | |
+| DisplayName | string | Set to Alternate ID if it exists otherwise will be the TradeStation Account ID | |
+| Duration | string | FX - DAY, FU - | |
+| ExecuteQuantity | integer | Quantity executed for order | |
+| FilledCanceled | string | Time that order was filled, cancelled, or rejected | |
+| FilledPriceText | string | FilledPrice with decimal precision applied | |
+| GroupName | string | For Conditional Orders | |
+| Legs | [Leg](../leg/) | | US |
+| LimitPriceText | string | LimitPrice with decimal precision applied | |
+| OrderID | integer | Key for identifying this order | |
+| OrderConfirmId | string | Not Required, enables detecting duplicate orders.  Must be 25-char max length and unique for API Key, user, and order | |
+| Originator | integer | FDCN Id of the user that placed the order | |
+| Quantity | integer | Quantity of shares in the order | |
+| QuantityLeft | integer | Quantity remaining to execute on order | |
+| Routing | string | Route order was done | |
+| Spread | string | | |
+| Status | string | Status of Order, [described below](#order_status_categories) | |
+| StopPriceText | string | StopPrice with decimal precision applied | |
+| Symbol | string | Exchange symbol for this transaction | |
+| TimeStamp | string, M/D/YYYY h:m:s tt | Time in UTC/GMT that order was placed | |
+| TriggeredBy | string | For Conditional Orders | |
+| Type | string | Buy, Sell, Buy to Close, Buy to Open, Sell to Open, Sell To Close, Buy To Cover, Sell to Short | |
+| FundSource | string | Cash, Margin-Negotiable, Margin-Standard | JPEQ |
+| LotSelectionStrategy | string | Fifo, Lifo, etc | JPEQ |
+| TaxationMethod | string | Tokutei, Non-Tokutei, Undefined | JPEQ |
 
 ### Order Status Categories
 

@@ -1,6 +1,6 @@
 ---
 layout: en
-title: Quotes/Changes
+title: Quote/Changes
 category: stream
 permalink: quote-changes/
 weight: 1

@@ -4,6 +4,7 @@ title: Balances
 category: accounts
 permalink: balances/
 weight: 1
+version: 2.4
 ---
 
 ### Summary
@@ -14,27 +15,32 @@ Requesting balance information for a particular account
 
 * Method: `GET`
 * Path: `/accounts/{accountkey}/balances`
-* URI Parameters:
-
-  * {accountkey}
+* URI Parameters:  
+  * `{accountkey}` = The value of `Key` from [AccountInfo](../../objects/account-info) object
 * Authentication: Requires a valid access token
 
 ### Returns
 
-* General [Account](../../objects/account) object
-* [Account Currency Detail](../../objects/account-currency-detail) object
-* [Equity Account](../../objects/equity-account) object if requesting an Equity account
-* [Forex Account](../../objects/forex-account) & [Forex Account Currency Detail](../../objects/forex-account-currency-detail) objects if requesting a Forex account
-* [Futures Account](../../objects/futures-account) & [Futures Account Currency Detail](../../objects/futures-account-currency-detail) object if requesting a Futures account
+A generic [Account](../../objects/account) object that has additional dynamic fields per account-type as shown below: 
+
+* [Equity Account](../../objects/equity-account) object for Equity account (Type = C, M, or D)
+* [Forex Account](../../objects/forex-account) object for Forex account (Type = X)  
+    * Contains [Forex Account Currency Detail](../../objects/forex-account-currency-detail) child-object  
+* [Futures Account](../../objects/futures-account) object for Futures account (Type = F)  
+    * Contains [Futures Account Currency Detail](../../objects/futures-account-currency-detail) child-object  
+* [Japanese Equity Account](../../objects/jp-equity-account) object for Japanese Equities account (Type = J)
+       
 
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 
 Example Request:
+
 
     GET https://api.tradestation.com/accounts/114275/balances HTTP/1.1
     Authorization: Bearer b0R4MHZ5WjhVUVBzQW5wT
@@ -57,9 +63,9 @@ Example Response: ([Account](../../objects/account) object details)
         "BODEquity": 3247154.8600,
         "BODNetCash": 2870974.6200,
         "ClosedPositions": [],
-        "Key": 111111,
+        "Key": "121111",
         "MarketValue": 0,
-        "Name": "111111QA",
+        "Name": "121111QA",
         "RealTimeAccountBalance": 2870328.5200,
         "RealTimeBuyingPower": 2867875.219800,
         "RealTimeEquity": 3249600.160200,
@@ -89,6 +95,48 @@ Example Response: ([Account](../../objects/account) object details)
         "RealTimeOvernightBuyingPower": 2870326.520000,
         "UnsettledFund": 646.1000
     }
+
+Example Response: ([Equity Account](../../objects/equity-account) object
+
+    HTTP/1.1 200 OK
+    Cache-Control: private
+    Content-Length: 1028
+    Content-Type: application/json; charset=utf-8
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 4.0.30319
+    X-Powered-By: ASP.NET
+    Date: Tue, 31 May 2011 17:27:36 GMT
+    
+    [{
+        "Key": "131111",
+        "Name": "131111QA",
+        "Status": "A",
+        "StatusDescription": "Active",
+        "Type": "C",
+        "TypeDescription": "Cash",
+        ... etc ...
+    }]
+
+Example Response: ([Forex Account](../../objects/forex-account) object details with [Forex Account Currency Detail](../../objects/forex-account-currency-detail))
+
+    HTTP/1.1 200 OK
+    Cache-Control: private
+    Content-Length: 1028
+    Content-Type: application/json; charset=utf-8
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 4.0.30319
+    X-Powered-By: ASP.NET
+    Date: Tue, 31 May 2011 17:27:36 GMT
+    
+    [{
+        "Key": "141111",
+        "Name": "141111QA",
+        "Status": "A",
+        "StatusDescription": "Active",
+        "Type": "X",
+        "TypeDescription": "Forex",
+        ... etc ...
+    }]
     
 Example Response: ([Futures Account](../../objects/futures-account) object details with [Futures Account Currency Detail](../../objects/futures-account-currency-detail))
 
@@ -108,9 +156,9 @@ Example Response: ([Futures Account](../../objects/futures-account) object detai
         "BODNetCash": 5000000.0000,
         "ClosedPositions": [],
         "DisplayName": "5430612 QA",
-        "Key": 114277,
+        "Key": "114277",
         "MarketValue": 70295825.000000000000000,
-        "Name": "5430612 QA",
+        "Name": "114277QA",
         "RealTimeAccountBalance": 4995774.4804,
         "RealTimeBuyingPower": 3212461.980402,
         "RealTimeEquity": 3212461.98040200000000000000,
@@ -180,4 +228,26 @@ Example Response: ([Futures Account](../../objects/futures-account) object detai
         "RealTimeTradeEquity": -1783312.499998,
         "SecurityOnDeposit": 0.0000,
         "TodayRealTimeTradeEquity": -1783312.49999800000000000000
+    }]
+
+
+Example Response: ([Japanese Equity Account](../../objects/jp-equity-account) object
+
+    HTTP/1.1 200 OK
+    Cache-Control: private
+    Content-Length: 1028
+    Content-Type: application/json; charset=utf-8
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 4.0.30319
+    X-Powered-By: ASP.NET
+    Date: Tue, 31 May 2011 17:27:36 GMT
+    
+    [{
+        "Key": "151111",
+        "Name": "151111QA",
+        "Status": "A",
+        "StatusDescription": "Active",
+        "Type": "J",
+        "TypeDescription": "JPEQ",
+        ... etc ...
     }]
