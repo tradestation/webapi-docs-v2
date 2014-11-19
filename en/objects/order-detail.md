@@ -40,6 +40,9 @@ tags: JPEQ
 | FundSource | string | Cash, Margin-Negotiable, Margin-Standard | JPEQ |
 | LotSelectionStrategy | string | Fifo, Lifo, etc | JPEQ |
 | TaxationMethod | string | Tokutei, Non-Tokutei, Undefined | JPEQ |
+| Change | string | | JPEQ |
+| LastPrice | string | | JPEQ |
+| SymbolDescription | string | | JPEQ |
 
 ### Order Status Categories
 

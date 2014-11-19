@@ -15,9 +15,8 @@ Requesting position information for a particular account
 
 * Method: `GET`
 * Path: `/accounts/{accountkey}/positions`
-* URI Parameters:
-
-  * {accountkey}
+* URI Parameters:  
+  * `{accountkey}` = The value of `Key` from [AccountInfo](../../objects/account-info) object
 * Authentication: Requires a valid access token
 
 ### Returns
@@ -35,6 +34,7 @@ Example positions request that filters results in symbol = AAPL
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples

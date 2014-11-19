@@ -44,3 +44,6 @@ permalink: position/
 | Symbol                | string  | Symbol |
 | TimeStamp             | string  | Time position was opened |
 | TotalCost             | decimal | |
+| PositionGroupId       | integer | |
+| ExchangeCode          | string  | |
+| TaxationMethod        | string | Tokutei, Non-Tokutei, Undefined |
