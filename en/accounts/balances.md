@@ -56,16 +56,16 @@ Example Response: ([Account](../../objects/account) object details)
     Date: Tue, 31 May 2011 17:27:36 GMT
     
     {
-	    "Alias": "",
-		"BODBuyingPower": null, 
+        "Alias": "",
+        "BODBuyingPower": null, 
         "BODEquity": 3247154.8600,
         "BODNetCash": 2870974.6200,
         "ClosedPositions": [],
-		"DisplayName": "121111QA",
+        "DisplayName": "121111QA",
         "Key": "121111",
         "MarketValue": 0,
         "Name": "121111QA",
-		"RTBuyingPower": null,
+        "RTBuyingPower": null,
         "RealTimeAccountBalance": 2870328.5200,
         "RealTimeBuyingPower": 2867875.219800,
         "RealTimeEquity": 3249600.160200,
