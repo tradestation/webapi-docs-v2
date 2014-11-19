@@ -1,6 +1,6 @@
 ---
 layout: en
-title: Position-Groups
+title: Position Groups
 category: accounts
 permalink: position-groups/
 weight: 2
