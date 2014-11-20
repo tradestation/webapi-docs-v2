@@ -4,6 +4,7 @@ title: Get User Accounts
 category: users
 permalink: accounts/
 weight: 1
+tags: JPEQ
 ---
 
 ### Summary
@@ -26,6 +27,7 @@ Requesting accounts associated to a particular user
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
@@ -49,23 +51,49 @@ Example Response: ([Account Info](../../objects/account-info) object details)
     Date: Thu, 06 Jan 2011 17:21:43 GMT
     
     [{
-        "Key": 987654,
+	    "Alias": "",
+        "AltId": null,
+        "DisplayName": "9876543 MyName",
+        "FundSource": 0,
+        "Key": "987654",
         "Name": "9876543 MyName",
         "Type": "C",
         "TypeDescription": "Cash"
     }, {
-        "Key": 876543,
+	    "Alias": "",
+        "AltId": null,
+        "DisplayName": "8765432 MyName",
+        "FundSource": 0,
+        "Key": "876543",
         "Name": "8765432 MyName",
         "Type": "M",
         "TypeDescription": "Margin"
     }, {
-        "Key": 765432,
+	    "Alias": "",
+        "AltId": null,
+        "DisplayName": "7654321 MyName",
+        "FundSource": 0,
+        "Key": "765432",
         "Name": "7654321 MyName",
         "Type": "F",
         "TypeDescription": "Futures"
     }, {
-        "Key": 654321,
+	    "Alias": "",
+        "AltId": null,
+        "DisplayName": "FX6543210 MyName",
+        "FundSource": 0, 
+        "Key": "654321",
         "Name": "FX6543210 MyName",
         "Type": "X",
         "TypeDescription": "Forex"
+
+    }, {
+	    "Alias": "",
+        "AltId": null,
+        "DisplayName": "JPEQ6543210 MyName",
+        "FundSource": 0,
+        "Key": "6543210",
+        "Name": "JPEQ6543210 MyName",
+        "Type": "J",
+        "TypeDescription": "JPEQ"
     }]

@@ -24,12 +24,13 @@ We encourage you to fork our work and make your own improvements. If you have an
 
 We'd like to encourage people to start translating the documentation into other languages. If you'd like to start a new translation, please first check to see if one exists in that language. If not, you can get started right away.
 
-Please observe the following guidelines:
-* Do start your translation from the `en/` directory
-* Do use the appropriate [language tag](http://en.wikipedia.org/wiki/IETF_language_tag) for your new directory
-* Do not translate from anything other than the `en/` directory, as this will introduce errors
-* Do not modify the general markup or structure of the documents
-* Do not include your own styles or scripts
+Please observe the following guidelines:  
+
+* Do start your translation from the `en/` directory  
+* Do use the appropriate [language tag](http://en.wikipedia.org/wiki/IETF_language_tag) for your new directory  
+* Do not translate from anything other than the `en/` directory, as this will introduce errors  
+* Do not modify the general markup or structure of the documents  
+* Do not include your own styles or scripts  
 
 Here's an example of how to start a new translation:
 

@@ -22,6 +22,8 @@ permalink: order/
 | OrderConfirmId | string | 25-char max. Must be unique id per order per API Key and User |
 | AdvancedOptions | [Advanced Options](../advanced-options) | Used for Trailing Stop orders |
 | OSOs | [Group Order](../group-order/) | |
+| FundSource | string | Cash, StandardMargin, NegotiatedMargin |
+| TaxationMethod | string | Undefined, Delayed, Tokutei |
 
 ### Example JSON
 
@@ -38,6 +40,8 @@ permalink: order/
         "StopPrice": "0.00",
         "Symbol": "GOOG",
         "TradeAction": "Buy",
+		"FundSource": "Cash",
+		"TaxationMethod": "Tokutei",
         "OrderConfirmId": "0044750066"
     }
 
