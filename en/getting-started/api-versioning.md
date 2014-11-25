@@ -8,45 +8,47 @@ weight: 4
 
 The TradeStation WebAPI is a living API that attempts to improve its contract over time.  As a result, we will introduce new versions over time that include new and breaking changes to the existing API.
 
-Typically, 3 versions will be maintained at any given time:
-
-* Current Version
-* Last Version
-* Next Version
-
-### Versioning Contract
-
-* Versions use integer numbering with no factional version.
-* Versions are Global but are applied Locally to resources. 
-   * Apply to the whole API surface, but changes may occur on only 1 or a few resources.
-   * If a resource did not change, it will still be carried forward to the next version unchanged, so there is  no need to request a different version for each API resource.
-* Versions are opt-in, with each API-version having a limited lifetime after which it will become deprecated and ultimately will require API-consumers to update to a newer version or else become obsolete.
-* If no `Accept-Version` header is specified, the "Current" version is used.
-
 ### Requesting a specific API version
 
-API-consumers are expected to pass the `Accept-Version` header on each request.
+API-consumers must pass the `APIVersion` via the querystring on each request.  
 
-If no `Accept-Version` header is specified, the "Current" version is defaulted.
+The current API implementation versions are:
 
-See below for an example of how to specify a version:
+* 20101026 - Original WebAPI
+* 20150101 - Japanese Equities release.
+
+NOTE: For legacy applications, omitting the `APIVersion` parameter will continue to work, but will be deprecated at some point in the near future, so its in your best interest to start specifying the APIVersion you wish to receive.
+
+
+### Versioning Rules
+
+* Versions are integer value based upon the publish date such as 20140101 for January 1, 2014.
+* Only official version numbers are supported - you may not specify any random date, nor the current date.
+* Versions are "Opt-In" per request so that you can slowly adopt new versions on a per resource basis.
+  * There is no need to request a different version for each API resource.
+  * It's recommended that you upgrade all related resources together to avoid unexpected inconsistencies.
+* New versions may not affect all resources, and any unaffected resource will continue to work the same as the prior version.
+* Versions have a limited lifetime after which it will become deprecated and ultimately will require API-consumers to update to a newer version or else become obsolete.
 
 
 ### Errors
 
 * `401` | Unauthorized
-* `412` | Precondition Failed.  Version Not Supported
+* `400` | Bad Request. 
+   * "Invalid Request"   
+   * "The APIVersion {version} is invalid"
+   * "The APIVersion {version} has been deprecated"
+   * "The APIVersion {version} has an invalid format. The APIVersion must be numeric and in this pattern YYYYMMDD"
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 
 ### Example Request
 
-    GET https://api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+    GET https://api.tradestation.com/WebAPI/users/testuser/accounts?APIVersion=20101026 HTTP/1.1
     Authorization: QUNCSmI
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
-	Accept-Version: 2
     
 ### Example Response 
 
@@ -55,21 +57,26 @@ See below for an example of how to specify a version:
     Content-Length: 218
     Content-Type: application/json; charset=utf-8
     Server: Microsoft-IIS/7.5
-	Version: 2
+	APIVersion: 20150601
     Date: Fri, 18 Mar 2011 18:21:45 GMT
     
     [  ... body ... ]
 
 ### Example Unsupported Version Response 
 
-    HTTP/1.1 412OK
+    HTTP/1.1 400 Bad Request
     Cache-Control: private
     Content-Length: 218
     Content-Type: application/json; charset=utf-8
     Server: Microsoft-IIS/7.5
     Date: Fri, 18 Mar 2011 18:21:45 GMT
     
-    Precondition Failed. Version Not Supported
+	{
+	  "Error" : {
+	    "StatusCode" : 400
+	    "Message" : "The APIVersion 20010101 is invalid"
+	  }
+	}
 
 
 
