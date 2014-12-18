@@ -21,11 +21,14 @@ Requesting balance information for a particular account
 
 ### Returns
 
-A generic [Account](../../objects/account) object that has additional dynamic fields per account-type as shown below: 
+A generic [Account](../../objects/account) or [Japanese Account](../../objects/jp-account) object that has additional dynamic fields per account-type as shown below: 
+
 
 * [Equity Account](../../objects/equity-account) object if requesting an Equity account (Type = C, M, or D)
 * [Japanese Equity Account](../../objects/jp-equity-account) object for Japanese Equities account (Type = J)
-       
+* [Option Account](../../objects/jp-option-account) object if requesting an option account 
+* [Buying Power](../../objects/buying-power) object with beginning of day and realTime data 
+
 
 ### Errors
 
@@ -34,6 +37,64 @@ A generic [Account](../../objects/account) object that has additional dynamic fi
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
+
+
+Example Request:
+
+
+    GET https://jp-api.tradestation.com/accounts/114275/balances?APIVersion=20150101 HTTP/1.1
+    Authorization: Bearer b0R4MHZ5WjhVUVBzQW5wT
+    Accept: application/JSON
+    Content-Type: application/x-www-form-urlencoded
+    Host: api.tradestation.com
+
+Example Response: ([Japanese Account](../../objects/jp-account) object)
+
+    HTTP/1.1 200 OK
+    Cache-Control: private
+    Content-Length: 1028
+    Content-Type: application/json; charset=utf-8
+    Server: Microsoft-IIS/7.5
+    X-AspNet-Version: 4.0.30319
+    X-Powered-By: ASP.NET
+    Date: Tue, 31 May 2011 17:27:36 GMT
+
+    [{
+        "Id": "1234",
+        "AccountDisplayName": "1234 Display Name",
+        "Status": "Open",
+        "Restrictions": [
+          "MarginCall"
+        ],
+        "AllowedFundSources": [
+          "Cash",
+          "StandardMargin",
+          "NegotiatedMargin"
+        ],
+        "AllowedAssets": [
+          "Equity"
+        ],
+        "Equity": {
+          "Enabled": true,
+          "DayTrading": {
+            "Enabled": false
+          }
+        },
+        "BODBuyingPower": {
+          "AssetValue": 8000.0,
+          "CashBalance": 8675309.0,
+          "CashBuyingPower": 1000001.0,
+          "CashUnrealizedPL": 1288.0,
+          "MarginBuyingPower": 9000.0,
+          "MarginMaintenanceRatio": 5.0,
+          "MarginUnrealizedPL": 7100.0,
+          "StockValue": 11000.0
+        },
+        "RealTimeBuyingPower": {}
+      }]
+
+
+
 
 Example Request:
 
@@ -95,7 +156,7 @@ Example Response: ([Account](../../objects/account) object details)
         "UnsettledFund": 646.1000
     }
 
-Example Response: ([Equity Account](../../objects/equity-account) object
+Example Response: ([Equity Account](../../objects/equity-account) object)
 
     HTTP/1.1 200 OK
     Cache-Control: private
@@ -119,23 +180,4 @@ Example Response: ([Equity Account](../../objects/equity-account) object
 
 
 
-Example Response: ([Japanese Equity Account](../../objects/jp-equity-account) object
 
-    HTTP/1.1 200 OK
-    Cache-Control: private
-    Content-Length: 1028
-    Content-Type: application/json; charset=utf-8
-    Server: Microsoft-IIS/7.5
-    X-AspNet-Version: 4.0.30319
-    X-Powered-By: ASP.NET
-    Date: Tue, 31 May 2011 17:27:36 GMT
-    
-    [{
-        "Key": "151111",
-        "Name": "151111QA",
-        "Status": "A",
-        "StatusDescription": "Active",
-        "Type": "J",
-        "TypeDescription": "JPEQ",
-        ... etc ...
-    }]

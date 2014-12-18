@@ -68,8 +68,8 @@ Example Request:
         "OrderType": "Limit",
         "Quantity": "10",
         "Symbol": "ARNA",
-		"FundSource": "Cash",
-		"TaxationMethod": "Tokutei",
+        "FundSource": "Cash",
+        "TaxationMethod": "Tokutei",
         "TradeAction": "Buy"
     }
 
