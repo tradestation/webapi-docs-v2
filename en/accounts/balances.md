@@ -34,7 +34,7 @@ A generic [Account](../../objects/account) or [Japanese Account](../../objects/j
 
 * `401` | Unauthorized
 * `404` | Not Found
-* `5xx` | Server error [Contact TradeStation](mailto:webapi@tradestation.com)
+* `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
 
