@@ -53,21 +53,3 @@ The following WebAPI resources & features were changed to support specific marke
   * [Orders](../../accounts/orders) (new fields, values)
   * [Positions](../../accounts/positions) (new fields, values)
   * [Position Groups](../../accounts/position-groups) (new resource)
-
-###Field Values
-There are various fields that contain a large set of values, but only some values are applicable to the Japanese market.   This information may be important when building GUI applications that need to restrict input values or apply filters to API requests.
-
-* GET /v2/Resource1
-  * FieldName 1
-     * Japan-specific Value1
-     * Japan-specific Value2
-  * FieldName 2
-     * Japan-specific Value1
-     * Japan-specific Value2
-* POST /v2/Resource2
-  * FieldName 1
-     * Japan-specific Value1
-     * Japan-specific Value2
-  * FieldName 2
-     * Japan-specific Value1
-     * Japan-specific Value2
