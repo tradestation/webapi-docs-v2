@@ -23,7 +23,7 @@ permalink: quote/
 | DisplayType | integer | Symbol's price display type based on the [enum below](#display_type_options) |
 | Error | string | Error message |
 | Exchange | string | Name of exchange where this symbol is traded in |
-| FractionalDisplay | boolean | Determine whether fractional price display is required |
+| FractionalDisplay | boolean | Flag to indicate whether this symbol should display fractional price |
 | High | decimal | Today's high price |
 | HighPriceDisplay | string | Today's high price |
 | High52Week | decimal | 52 week high price |
@@ -33,12 +33,14 @@ permalink: quote/
 | LastPriceDisplay | string | Last traded price |
 | Low | decimal | Today's low price |
 | LowPriceDisplay | string | Today's low price |
+| PreviousCloseDelta | decimal | Previous day close price delta |
+| PreviousCloseDeltaPercent | decimal | Previous day close price delta percent |
+| High52WeekDateTime | DateTimeOffset |  52 week high price time stamp |
+| Low52WeekDateTime | DateTimeOffset  |  52 week low price time stamp |
 | Low52Week | decimal | 52 week low price |
 | Low52WeekPriceDisplay | string | 52 week low price |
 | MinMove | integer | Multiplying factor using the display type to determine the minimum price increment the asset trades in |
 | NameExt | string | If the Quote is delayed this property will be set to `D` |
-| NetChange | decimal | |
-| NetChangePct | decimal | |
 | Open | decimal | Today's open price |
 | OpenPriceDisplay | string | Today's open price |
 | PointValue | decimal | Symbol's point value |

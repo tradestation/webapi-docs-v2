@@ -1,8 +1,8 @@
 ---
 layout: en
-title: Japanese Option Account
+title: Option Account
 category: objects
-permalink: jp-option-account/
+permalink: option-account/
 ---
 
 [See fields common among all account types.](../account/)
