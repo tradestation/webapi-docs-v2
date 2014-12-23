@@ -51,7 +51,7 @@ A collection of the [Order Result](../../objects/order-result) object
 
 Example Request:
 
-    POST https://api.tradestation.com/v2/orders HTTP/1.1
+    POST https://api.tradestation.com/v2/orders?APIVersion=20150101 HTTP/1.1
     Authorization: Bearer Qk5WZG01Y2dxRXNyV2kyMGVl
     Accept: application/json
     Content-Type: application/json
@@ -61,16 +61,22 @@ Example Request:
     Host: api.tradestation.com
     
     {
-        "AccountKey": "123456",
-        "AssetType": "EQ",
-        "Duration": "DYP",
-        "LimitPrice": "1.00",
-        "OrderType": "Limit",
-        "Quantity": "10",
-        "Symbol": "ARNA",
+        "OrderConfirmId": "96x0c/Bq00qatgyO+QO4pA",
+        "AccountId": 281994,
+        "AssetType": "Equity",
+        "Side": "Buy",
+        "TimeInForce": "DayPlus",
+        "LimitPrice": "0.14",
+        "Type": "Limit",
+        "Quantity": 5,
+        "Route": "Intelligent",
+        "StopPrice": 14.12,
+        "Symbol": "JP:8698-TS",
+        "TimeInForceExpiration": null,
         "FundSource": "Cash",
-        "TaxationMethod": "Tokutei",
-        "TradeAction": "Buy"
+        "TaxationMethod": "Calculated",
+        "LotSelectionStrategy": "FirstInFirstOut",
+        "Condition": "Basic"
     }
 
 Example Response:
@@ -80,58 +86,8 @@ Example Response:
     Content-Type: application/json; charset=utf-8
     
     [{
-        "Message": "Sent order: Buy 10 ARNA @ 1.00 Limit",
-        "OrderID": "207887693",
-        "OrderStatus": "Ok"
+        "Message": "Sent order: Buy 5 JP:8698-TS",
+        "Id": 207887693,
+        "Status": "Success"
     }]
 
-Trailing Stop Request:
-
-    POST https://api.tradestation.com/v2/orders/ HTTP/1.1
-    Authorization: Bearer M2FES2FnQ1EvTmdZWTFPTnpMRU4xMHVNY0tS
-    Content-Length: 245
-    Accept: application/json
-    Content-Type: application/json
-    
-    {
-        "AccountKey": "987654",
-        "AssetType": "EQ",
-        "Duration": "GTC",
-        "LimitPrice": "3.00",
-        "StopPrice": "2.00",
-        "OrderType": "StopMarket",
-        "Quantity": "10",
-        "Symbol": "ARNA",
-        "TradeAction": "Buy",
-        "AdvancedOptions": {
-            "TrailingStop": {
-                "ByPoints": true,
-                "Value": 3
-            }
-        }
-    }
-
-Trailing Stop Response:
-
-    HTTP/1.1 200 OK
-    Content-Length: 104
-    Content-Type: application/json; charset=utf-8
-    
-    [{
-        "Message": "Sent order: Buy 10 ARNA @  Stop Market - Trl: 3",
-        "OrderID": "207924340",
-        "OrderStatus": "Ok"
-    }]
-
-JSONP Request:
-
-    GET https://api.tradestation.com/v2/jsonp/orders/send?data=%7B%22AccountKey%22%3A%2212345%22%2C%22AssetType%22%3A%22FX%22%2C%22LimitPrice%22%3A%221%22%2C%22OrderType%22%3A%22Limit%22%2C%22Quantity%22%3A%2220000%22%2C%22Symbol%22%3A%22USDJPY%22%2C%22TradeAction%22%3A%22Buy%22%2C%20%22Duration%22%3A%22GTC%22%7D%0A&callback=jQueryCallBack&oauth_token=ZzkzQ1ZX HTTP/1.1
-
-JSONP Response:
-
-    HTTP/1.1 200 OK
-    Content-Length: 116
-    Content-Type: application/json
-    jsonp-callback: jQueryCallBack
-    
-    jQueryCallBack([{"Message":"Sent order: Buy 20,000 USDJPY @ 1.000 Limit","OrderID":"208033621","OrderStatus":"Ok"}])
