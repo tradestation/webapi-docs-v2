@@ -21,7 +21,7 @@ permalink: position/
 | UnrealizedGainLoss    | decimal | Unrealized Gain or Loss |
 | UnrealizedGainLossPercent       | decimal | Unrealized Gain or Loss Precentage |
 | MarketValue           | decimal | Total Market Value of held position |
-| OpenDateTime          | datetimeoffset | Open date time |
+| OpenDateTime          | datetime | Open date time with UTC offset |
 | Quote                 | [Quote](../quote) | Data object with quote properties |
 | FundSource            | [Fund Source](../fund-source) | Data object with fund source properties |
 

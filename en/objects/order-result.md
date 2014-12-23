@@ -8,5 +8,5 @@ permalink: order-result/
 | Field       | Type   | Description |
 | ----------- | ------ | ----------- |
 | Message     | string | |
-| OrderID     | string | |
-| OrderStatus | string | Ok, Failed |
+| Id     | int | |
+| Status | enum | Success, Failed |

@@ -7,170 +7,41 @@ permalink: order/
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| OrderID | string | Only used for cancel or cancelReplace requests |
-| AssetType | string | EQ, OP, FU, FX |
-| Symbol | string | |
-| Quantity | string | |
-| LimitPrice | string | |
-| StopPrice | string | |
-| OrderType | string | market, limit, stoplimit, stopmarket |
-| Route | string | |
-| Duration | string | |
-| AccountKey | string | |
-| GTDDate | string | |
-| TradeAction | string | |
 | OrderConfirmId | string | 25-char max. Must be unique id per order per API Key and User |
-| AdvancedOptions | [Advanced Options](../advanced-options) | Used for Trailing Stop orders |
-| OSOs | [Group Order](../group-order/) | |
-| FundSource | string | Cash, StandardMargin, NegotiatedMargin |
-| TaxationMethod | string | Undefined, Delayed, Tokutei |
+| AccountId | string | Id of the account used to place the order |
+| Symbol | string | Stock Symbol |
+| Quantity | string | Number of stocks|
+| AssetType | enum | Equity, Option, Future, Forex |
+| LimitPrice | decimal |  |
+| StopPrice | decimal | |
+| Type | enum | Market, Limit, StopLimit, StopMarket |
+| Route | string | |
+| TimeInForce | enum | Day, DayPlus, GoodTillCancel, GoodTillCancelPlus, GoodTillDate, GoodTillDatePlus, GoodTill1Week, GoodTill1Month, GoodTill1Minute, GoodTill3Minute, GoodTill5Minute, GoodTillCrossing, ImmediateOrCancel, FillorKill, AtTheOpening, AtTheClose, AMOnly, PMOnly  |
+| TimeInForceExpiration | date | DateTime with UTC offset |
+| Side | enum | Buy, Sell, Short, SellShortExempt, BuyToOpen, BuyToClose, Genbiki, Genwatashi |
+| FundSource | enum | Cash, Margin, StandardMargin, NegotiatedMargin |
+| TaxationMethod | string | Delayed, Calculated |
+| LotSelectionStrategy | enum | FirstInFirstOut, LastInFirstOut |
+| Condition | enum | Basic, OrderSendOrder, OrderCancelOrder, Bracket  |
 
 ### Example JSON
 
     {
-        "AccountKey": "123456",
-        "AssetType": "EQ",
-        "Duration": "DAY",
-        "GTDDate": "",
-        "LimitPrice": "10.00",
-        "OrderID": "",
-        "OrderType": "Limit",
-        "Quantity": "10",
+        "OrderConfirmId": "96x0c/Bq00qatgyO+QO4pA",
+        "AccountId": 281994,
+        "AssetType": "Equity",
+        "Side": "Buy",
+        "TimeInForce": "DayPlus",
+        "LimitPrice": "0.14",
+        "Type": "Limit",
+        "Quantity": 5,
         "Route": "Intelligent",
-        "StopPrice": "0.00",
-        "Symbol": "GOOG",
-        "TradeAction": "Buy",
-		"FundSource": "Cash",
-		"TaxationMethod": "Tokutei",
-        "OrderConfirmId": "0044750066"
+        "StopPrice": 14.12,
+        "Symbol": "JP:8698-TS",
+        "TimeInForceExpiration": null,
+        "FundSource": "Cash",
+        "TaxationMethod": "Calculated",
+        "LotSelectionStrategy": "FirstInFirstOut",
+        "Condition": "Basic"
     }
-
-### Example OSO JSON
-
-    {
-        "AssetType": "EQ",
-        "Symbol": "ARNA",
-        "Quantity": "10",
-        "LimitPrice": ".25",
-        "OrderType": "Limit",
-        "Duration": "DYP",
-        "AccountKey": "123456",
-        "TradeAction": "Buy",
-        "OrderConfirmId": "0044750066",
-        "AdvancedOptions": {
-            "TrailingStop": null
-        },
-        "OSOs": [{
-                "Type": "NORMAL",
-                "Orders": [{
-                        "AssetType": "EQ",
-                        "Symbol": "ARNA",
-                        "Quantity": "10",
-                        "LimitPrice": "1.25",
-                        "OrderType": "Limit",
-                        "Duration": "DYP",
-                        "AccountKey": "123456",
-                        "TradeAction": "Sell",
-                        "OrderConfirmId": "0044750067",
-                        "AdvancedOptions": {
-                            "TrailingStop": null
-                        },
-                        "OSOs": []
-                    }
-                ]
-            }
-        ]
-    }
-
-### Field Definitions and Valid Inputs
-
-* AccountKey {Required} *Unique Identifier for Accounts*
-* AdvancedOptions *Defines Trailing Stop Parameters*
-* AssetType {Required}
-
-  * Valid Inputs:
-    * EQ - Equities
-    * OP - Options
-    * FU - Futures
-    * FX - Forex
-* Duration {Required} *The Time In Force value for the order*
-
-  * Valid inputs for equities:
-    * DAY
-    * DYP - *Day plus*
-    * GTC - *Good till cancelled*
-    * GCP - *GTC plus*
-    * GTD - *Good through date*
-    * GDP - *GTD plus*
-    * IOC
-    * FOK
-    * OPG
-    * CLO
-    * 1 - *1 minute*
-    * 3 - *3 minute*
-    * 5 - *5 minute*
-  * Valid inputs for options:
-    * DAY - *Day*
-    * GTC - *Good till cancelled*
-    * GTD - *Good through date*
-    * IOC
-    * FOK
-    * OPG
-* GTDDate {Required for orders with Duration = GTD} *Date that Order is valid through*
-
-  * Valid string input format: MM/DD/YYYY
-* LimitPrice {Required For Limit and StopLimit Orders}
-* OrderID - *Not used in send order*
-
-  * Valid Input: Empty String
-* OrderConfirmId - { Not required, used to detect dupliate orders }
-
-  * 25-char max length
-  * must be unique per API key, per order, per user
-* OrderType {Required}
-
-  * Valid inputs:
-    * Limit
-    * Market
-    * StopLimit
-    * StopMarket
-* Quantity {Required}
-* Route {Not required, defaults to Intelligent}
-
-  * Valid inputs for Equities:
-    * Intelligent
-    * AMEX
-    * ARCA
-    * AUTO
-    * BATS
-    * BTRD
-    * CTDL
-    * EDGA
-    * EDGX
-    * GFLO
-    * NITE
-    * NQBX
-    * NSDQ
-    * NYSE
-  * Valid inputs for Options:
-    * AMOP
-    * BOX
-    * CBOE
-    * ISE
-    * NYOP - *NYSE Arca*
-    * PHLX
-    * XNDQ
-* StopPrice {Required for StopMarket and StopLimit orders}
-* Symbol {Required}
-* TradeAction {Required}
-
-  * Valid inputs
-    * buy - EQ, FU, FX
-    * sell - EQ, FU, FX
-    * buytocover - EQ
-    * sellshort - EQ
-    * buytoopen - OP
-    * buytoclose - OP
-    * selltoopen - OP
-    * selltoclose - OP
-* OSOs {Required if you wish to attach an OSO order}
+    
