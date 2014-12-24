@@ -44,6 +44,7 @@ A collection of the [Order Result](../../objects/order-result) object
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation
 ](mailto:webapi@tradestation.com)
 

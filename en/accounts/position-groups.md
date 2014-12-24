@@ -28,6 +28,7 @@ Requesting position information for a specific position group under a particular
 ### Errors
 
 * `401` | Unauthorized
+* `404` | Not Found
 * `5xx` | Unknown internal service error. [Contact TradeStation](mailto:webapi@tradestation.com)
 
 ### Examples
