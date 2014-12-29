@@ -47,7 +47,7 @@ Example orders request that filters results for symbol = AAPL
 
 Example Request:
 
-    GET https://api.tradestation.com/v2/accounts/123145/orders?APIVersion=20150101 HTTP/1.1
+    GET https://jp-api.tradestation.com/v2/accounts/123145/orders?APIVersion=20150101 HTTP/1.1
     Authorization: Bearer b0R4MHZ5WjhVUVBzQW5
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded
