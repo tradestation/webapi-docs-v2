@@ -22,7 +22,7 @@ Returns a list of symbol objects that have a symbol name or a description that c
   * Culture
 
     * ja-jp
-* Authentication: Currently only available to TradeStation. Requires a Client Access Token at a minimum
+* Authentication: Requires a valid access token
 
 ### Returns
 
@@ -30,7 +30,7 @@ A collection of [Symbol](../../objects/symbol) objects
 
 ### Results Filter
 
-This endpoint accomodates a subset of the [Open Data Protocol](http://www.odata.org/developers/protocols/uri-conventions#FilterSystemQueryOption) which can be used with the $top and $filter querystring parameters to filter responses.
+This endpoint accomodates a subset of the [Open Data Protocol](http://docs.oasis-open.org/odata/odata/v4.0/os/part2-url-conventions/odata-v4.0-os-part2-url-conventions.html#_Toc372793792) which can be used with the $top and $filter querystring parameters to filter responses.
 
 Example symbols suggest request that filters result set to the top 20 where Country = United States and Category = Stock.
 
@@ -46,7 +46,7 @@ Example symbols suggest request that filters result set to the top 20 where Coun
 Request:
 
     GET https://api.tradestation.com/v2/data/symbols/suggest/msf HTTP/1.1
-    Authorization: T1dEaXUwTGgxZEw
+    Authorization: Bearer T1dEaXUwTGgxZEw
     Host: api.tradestation.com
     Content-Length: 0
     Content-Type: application/json
