@@ -52,7 +52,7 @@ A collection of the [Order Result](../../objects/order-result) object
 
 Example Request:
 
-    POST https://jp-api.tradestation.com/v2/orders?APIVersion=20150101 HTTP/1.1
+    POST https://jp-api.tradestation.com/v2/orders?APIVersion=20150601 HTTP/1.1
     Authorization: Bearer Qk5WZG01Y2dxRXNyV2kyMGVl
     Accept: application/json
     Content-Type: application/json

@@ -14,7 +14,7 @@ API-consumers must pass the `APIVersion` via the querystring on each request.
 
 For example, the current API version is:
 
-* [20150101](../../versions/20150101) - Global/Japanese Equities release.
+* [20150601](../../versions/20150601) - Global/Japanese Equities release.
 
 NOTE: For legacy applications, omitting the `APIVersion` parameter will continue to route to [version 20101026](../../versions/20101026), but will be deprecated at some point in the near future, so its in your best interest to start specifying the APIVersion you wish to receive.
 

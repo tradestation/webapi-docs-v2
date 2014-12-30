@@ -41,7 +41,7 @@ A generic [Account](../../objects/account) object that has additional dynamic fi
 Example Request:
 
 
-    GET https://jp-api.tradestation.com/accounts/114275/balances?APIVersion=20150101 HTTP/1.1
+    GET https://jp-api.tradestation.com/accounts/114275/balances?APIVersion=20150601 HTTP/1.1
     Authorization: Bearer b0R4MHZ5WjhVUVBzQW5wT
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded

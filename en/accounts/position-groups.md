@@ -35,7 +35,7 @@ Requesting position information for a specific position group under a particular
 
 Example Request:
 
-    GET https://jp-api.tradestation.com/v2/accounts/JPEQ114275/positiongroups/1234?APIVersion=20150101 HTTP/1.1
+    GET https://jp-api.tradestation.com/v2/accounts/JPEQ114275/positiongroups/1234?APIVersion=20150601 HTTP/1.1
     Authorization: Bearer b0R4MHZ5WjhVUVBzQW5w
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded

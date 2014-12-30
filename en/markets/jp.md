@@ -12,7 +12,7 @@ This document acts as a consolidated list of the high-level differences in API b
 
 ### Overview
 
-The TradeStation WebAPI underwent a significant redesign with [version 20150101](../../versions/20150101) to improve support for international markets.  Therefore this is the first version where Japan markets are supported.  Below are details of the Japan-specific changes included as part of that version and how they affect API-consumers.  
+The TradeStation WebAPI underwent a significant redesign with [version 20150601](../../versions/20150601) to improve support for international markets.  Therefore this is the first version where Japan markets are supported.  Below are details of the Japan-specific changes included as part of that version and how they affect API-consumers.  
 
 ### Japan-Specific URI
 Please use the following base service URI for the Japanese market:
