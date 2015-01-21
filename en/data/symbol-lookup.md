@@ -131,7 +131,7 @@ The user must provide either the description, root, and category=futures
 
 Example Stock Request:
 
-    GET https://api.tradestation.com/v2/data/symbols/search/n=msf&c=stock HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/data/symbols/search/n=msf&c=stock HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded
@@ -173,7 +173,7 @@ Example Response: ([Symbol](../../objects/symbol) object details)
     
 Example StockOption Request:
 
-    GET https://api.tradestation.com/v2/data/symbols/search/r=aapl&category=stockoption HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/data/symbols/search/r=aapl&category=stockoption HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded

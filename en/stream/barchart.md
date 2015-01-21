@@ -98,7 +98,7 @@ _There is no daily bar that currently exists in the range with start date = 09-0
 
 Example Request:
 
-    GET https://api.tradestation.com/v2/stream/barchart/yhoo/1/minute/06-13-2013 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/barchart/yhoo/1/minute/06-13-2013 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
 
@@ -163,7 +163,7 @@ Example Response:
 
 Bars Back Example Request:
 
-    GET https://api.tradestation.com/v2/stream/barchart/spy/1/minute/5/06-13-2013 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/barchart/spy/1/minute/5/06-13-2013 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 

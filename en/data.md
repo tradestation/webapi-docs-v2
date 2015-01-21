@@ -12,7 +12,7 @@ Provides synchronous access to market data resources. Internally this service us
 
 ### Service URI
 
-`https://api.tradestation.com/v2/data/{method}`
+`/v2/data/{method}`
 
 ### Methods
 

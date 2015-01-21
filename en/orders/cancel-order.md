@@ -46,7 +46,7 @@ Resource for cancelling an open order
 
 Example Request:
 
-    DELETE https://api.tradestation.com/v2/orders/207887528 HTTP/1.1
+    DELETE https://[jp-]api.tradestation.com/v2/orders/207887528 HTTP/1.1
     Authorization: Bearer Qk5WZG01Y2dxRXNyV2kyMGVlbn
 
 Example Response:

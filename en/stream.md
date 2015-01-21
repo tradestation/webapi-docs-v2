@@ -14,7 +14,7 @@ Streaming API methods provide the consumer with asynchronous streaming data such
 
 ### Service URI
 
-`https://api.tradestation.com/v2/stream/{resource}`
+`/v2/stream/{resource}`
 
 ### Methods
 

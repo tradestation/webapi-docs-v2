@@ -12,7 +12,7 @@ Provides a list of resources for a given user id.
 
 ### Service URI
 
-`https://api.tradestation.com/v2/users/{userid}/{method}`
+`/v2/users/{userid}/{method}`
 
 ### Methods
 

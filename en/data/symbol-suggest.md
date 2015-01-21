@@ -34,7 +34,7 @@ This endpoint accomodates a subset of the [Open Data Protocol](http://docs.oasis
 
 Example symbols suggest request that filters result set to the top 20 where Country = United States and Category = Stock.
 
-    https://api.tradestation.com/v2/data/symbols/suggest/G?$top=20&$filter=Country%20eq%20'United%20States'&$filter=Category%20eq%20'Stock'
+    https://[jp-]api.tradestation.com/v2/data/symbols/suggest/G?$top=20&$filter=Country%20eq%20'United%20States'&$filter=Category%20eq%20'Stock'
 
 ### Errors
 
@@ -45,7 +45,7 @@ Example symbols suggest request that filters result set to the top 20 where Coun
 
 Request:
 
-    GET https://api.tradestation.com/v2/data/symbols/suggest/msf HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/data/symbols/suggest/msf HTTP/1.1
     Authorization: Bearer T1dEaXUwTGgxZEw
     Host: api.tradestation.com
     Content-Length: 0

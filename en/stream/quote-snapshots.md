@@ -33,7 +33,7 @@ Streams full quotes for a list of symbols
 
 Example Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/snapshots/yhoo,msft HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/quote/snapshots/yhoo,msft HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/json
 

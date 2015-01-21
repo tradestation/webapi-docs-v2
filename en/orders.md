@@ -14,7 +14,7 @@ The Orders Service also provides the ability to send conditional orders.
 
 ### Service URI
 
-`https://api.tradestation.com/v2/orders/{method}`
+`/v2/orders/{method}`
 
 ### Methods
 
