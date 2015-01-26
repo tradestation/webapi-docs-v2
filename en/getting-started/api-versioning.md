@@ -45,7 +45,7 @@ See [Available Versions](../../versions) for more details on what changes are in
 
 ### Example Request
 
-    GET https://api.tradestation.com/WebAPI/users/testuser/accounts?APIVersion=20101026 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/WebAPI/users/testuser/accounts?APIVersion=20101026 HTTP/1.1
     Authorization: QUNCSmI
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded

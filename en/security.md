@@ -12,7 +12,7 @@ Provides methods for obtaining access tokens for use with other services.
 
 ### Service URI
 
-`https://api.tradestation.com/v2/security/`
+`/v2/security/`
 
 ### Methods
 

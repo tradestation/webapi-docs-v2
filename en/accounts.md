@@ -12,7 +12,7 @@ The Accounts Service provides the consumer with resources to access balance, pos
 
 ### Service URI
 
-`https://api.tradestation.com/v2/accounts/{accountkey}/{method}`
+`/v2/accounts/{accountkey}/{method}`
 
 ### Methods
 

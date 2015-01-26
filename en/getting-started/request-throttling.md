@@ -44,7 +44,7 @@ A user logs into the TradeStation WebAPI with your application and issues a requ
 
 **Example 101st Request**
 
-    GET https://api.tradestation.com/v2/data/quotes/IBM,NFLX,MSFT,AMZN,AAPL HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/data/quotes/IBM,NFLX,MSFT,AMZN,AAPL HTTP/1.1
     Host: api.tradestation.com
     Authorization: bearer eE45VkdQSnlBcmI0Q2RqTi82SFdMSVE0SXMyOFo5Z3dzVzdzdk
     Accept: application/json

@@ -14,7 +14,7 @@ If no format is specified, the defaulted format is `application/json`.
 
 ### Example
 
-    GET https://api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
+    GET https://[jp-]api.tradestation.com/WebAPI/users/testuser/accounts HTTP/1.1
     Authorization: QUNCSmI
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded

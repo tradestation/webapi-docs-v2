@@ -35,7 +35,7 @@ Collection of [Order Result](../../objects/order-result) objects
 
 *BRK Request*
 
-    POST https://api.tradestation.com/v2/orders/groups HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/orders/groups HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
     Content-Type: application/json
@@ -85,7 +85,7 @@ Collection of [Order Result](../../objects/order-result) objects
 
 *OCO Request*
 
-    POST https://api.tradestation.com/v2/orders/groups HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/orders/groups HTTP/1.1
     Authorization: aflksdjfa
     Accept: application/JSON
     Content-Type: application/json

@@ -26,7 +26,7 @@ Whenever a stream ends for any reason, it will return a 200 status code followed
 
 Stream END Example Request:
 
-    GET https://api.tradestation.com/v2/stream/barchart/spy/1/minute/1/06-13-2013 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/barchart/spy/1/minute/1/06-13-2013 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 
@@ -57,7 +57,7 @@ Stream END Example Response:
 
 Stream ERROR Example Request:
 
-    GET https://api.tradestation.com/v2/stream/barchart/msft/1/minute/06-13-1951 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/barchart/msft/1/minute/06-13-1951 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 

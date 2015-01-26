@@ -108,7 +108,7 @@ The client application will route the end-user to our MFA (multi-factor authenti
 
 Authorize Uri
 
-* [https://api.tradestation.com/v2/authorize](https://api.tradestation.com/v2/authorize)
+* https://[jp-]api.tradestation.com/v2/authorize
 
 Required query string parameters
 
@@ -118,7 +118,7 @@ Required query string parameters
 
 **Example Authorization Page Url**
 
-    https://api.tradestation.com/v2/authorize/?redirect_uri=https://exampleclientapp.com/authcode.aspx&client_id=D7635234&response_type=code
+    https://[jp-]api.tradestation.com/v2/authorize/?redirect_uri=https://exampleclientapp.com/authcode.aspx&client_id=D7635234&response_type=code
 
 The URL will take you to a TradeStation login page.
 
@@ -155,7 +155,7 @@ Required form parameters:
 
 **Example Request**
 
-    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
     Host: api.tradestation.com
     Content-Length: 630
@@ -207,16 +207,16 @@ The client application will route the end-user to our MFA (multi-form authentica
 
 Authorize URI
 
-* [https://api.tradestation.com/v2/authorize](https`://api.tradestation.com/v2/authorize)
+* https://[jp-]api.tradestation.com/v2/authorize
 
 **Example Authorization Page URL**
 
-    https://api.tradestation.com/v2/authorize/?redirect_uri=https://www.exampleclientapp.com&client_id=D7635234&response_type=token
+    https://[jp-]api.tradestation.com/v2/authorize/?redirect_uri=https://www.exampleclientapp.com&client_id=D7635234&response_type=token
 
 
 **Example Response**
 
-    https://api.tradestation.com/v2/authorize/?redirect_uri=https://www.exampleclientapp.com&client_id=D7635234&response_type=token
+    https://[jp-]api.tradestation.com/v2/authorize/?redirect_uri=https://www.exampleclientapp.com&client_id=D7635234&response_type=token
 
 ### Client Credentials - Grant Type
 
@@ -250,7 +250,7 @@ The result of the request will be a JSON object with these values:
 
 **Example Request**
 
-    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Host: api.tradestation.com
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded
@@ -284,7 +284,7 @@ The token, prefixed with `Bearer` and a space must be included in the `Authoriza
 
 **Example Request**
 
-    GET https://api.tradestation.com/v2/users/TestUser1/accounts HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/users/TestUser1/accounts HTTP/1.1
     Host: api.tradestation.com
     Authorization: Bearer eE45VkdQSnlBcmI0Q2RqTi82SFdMSVE0SXMyOFo5Z3dzVzdzdk
     Accept: application/json

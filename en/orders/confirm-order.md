@@ -53,7 +53,7 @@ A collection of:
 
 Example Request:
 
-    POST https://api.tradestation.com/v2/orders/confirm HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/orders/confirm HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Content-Length: 207
     Content-type: application/json

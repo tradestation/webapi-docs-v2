@@ -16,7 +16,7 @@ When enabled, the streaming API method will include additional events on the str
 
 ### Service URI
 
-`https://api.tradestation.com/v2/stream/{resource}?heartbeat={true|false|interval}&heartbeat-style={heartbeat-style}`
+`/v2/stream/{resource}?heartbeat={true|false|interval}&heartbeat-style={heartbeat-style}`
 
 ### Heartbeat Options
 
@@ -33,7 +33,7 @@ Alternatively, you can set the heartbeat style to **keepalive**.  This indicates
 
 Stream with Default Heartbeats Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/changes?heartbeat=true HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/quote/changes?heartbeat=true HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 
@@ -48,7 +48,7 @@ Stream with Default Heartbeats Response:
 
 Stream with 8000ms Heartbeats Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/changes?heartbeat=8000 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/quote/changes?heartbeat=8000 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 
@@ -63,7 +63,7 @@ Stream with 8000ms Heartbeats Response:
 
 Stream with Constant-style Heartbeats Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/changes?heartbeat=true&heartbeat-style=constant HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/quote/changes?heartbeat=true&heartbeat-style=constant HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 
@@ -78,7 +78,7 @@ Stream with Constant-style Heartbeats Response:
 
 Stream with Keepalive-style Heartbeats Request:
 
-    GET https://api.tradestation.com/v2/stream/quote/changes?heartbeat=true&heartbeat-style=keepalive HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/quote/changes?heartbeat=true&heartbeat-style=keepalive HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Host: api.tradestation.com
 

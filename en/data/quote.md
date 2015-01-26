@@ -33,7 +33,7 @@ Snapshot quote for the specified symbol(s)
 
 Example Request:
 
-    GET https://api.tradestation.com/v2/Data/Quote/goog,msft HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/Data/Quote/goog,msft HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/JSON
     Content-Type: application/x-www-form-urlencoded

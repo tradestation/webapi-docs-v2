@@ -17,9 +17,9 @@ The TradeStation WebAPI underwent a significant redesign with [version 20150601]
 ### Japan-Specific URI
 Please use the following base service URI for the Japanese market:
 
-* [https://jpapi.tradestation.com/v2/](https://jpapi.tradestation.com/v2/)
+* [https://jp-api.tradestation.com/v2/](https://jp-api.tradestation.com/v2/)
 
-Although the WebAPI can be accessed globally, the above Uri directly addresses the Japan market features.  For all API resources listed in this documentation, you can replace references to https://api.tradestation.com/v2 with the above Uri.
+Although the WebAPI can be accessed globally, the above Uri directly addresses the Japan market features.  For all API resources listed in this documentation, you can replace references to https://[jp-]api.tradestation.com/v2 with the above Uri.
 
 ###Symbology
 Symbology is the way in which TradeStation interprets symbol data from the TradeStaton Network for display or when passing a Symbol Name to a request when calling the TradeStation WebAPI.
@@ -48,7 +48,7 @@ See Also [TradeStation Platform Symbology Types](http://help.tradestation.com/09
 The following WebAPI resources & features were changed to support specific market mechanics and data for  Japan exchanges and regulatory practices.
 
 * [Accounts](../../accounts)
-  * [Get User Accounts](../../users/get-user-accounts) (new fields, values)
+  * [Get User Accounts](../../users/accounts) (new fields, values)
   * [Balances](../../accounts/balances) (new fields, values)
   * [Orders](../../accounts/orders) (new fields, values)
   * [Positions](../../accounts/positions) (new fields, values)

@@ -32,7 +32,7 @@ Streams tick bar information for a particular symbol starting from a given numbe
 
 Example Request:
 
-    GET https://api.tradestation.com/v2/stream/tickbars/aapl/1/1 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/stream/tickbars/aapl/1/1 HTTP/1.1
     Authorization:  Bearer {yourAccessTokenHere}
 
 Example Response:

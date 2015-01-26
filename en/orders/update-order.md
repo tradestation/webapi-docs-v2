@@ -70,7 +70,7 @@ Updated [Order Result](../../objects/order-result) object
 
 Example Request: ([Update Order](../../objects/update-order) request)
 
-    PUT https://api.tradestation.com/v2/orders/207924381 HTTP/1.1
+    PUT https://[jp-]api.tradestation.com/v2/orders/207924381 HTTP/1.1
     Authorization: Bearer accesstokengoeshere
     Accept: application/json
     Content-Type: application/json
@@ -102,7 +102,7 @@ Example Response:
 
 Example JSONP Request:
 
-    GET https://api.tradestation.com/v2/jsonp/orders/208033619/cancelreplace?callback=jQueryCallback&oauth_token=ZzkzQ1ZXNzJ&data=%7B%22AccountKey%22%3A%22114278%22%2C%22AssetType%22%3A%22FX%22%2C%22LimitPrice%22%3A%221%22%2C%22OrderType%22%3A%22Limit%22%2C%22Quantity%22%3A%2220000%22%2C%22Symbol%22%3A%22USDJPY%22%2C%22TradeAction%22%3A%22Buy%22%2C%20%22OrderID%22%3A208033619%7D%0A HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/jsonp/orders/208033619/cancelreplace?callback=jQueryCallback&oauth_token=ZzkzQ1ZXNzJ&data=%7B%22AccountKey%22%3A%22114278%22%2C%22AssetType%22%3A%22FX%22%2C%22LimitPrice%22%3A%221%22%2C%22OrderType%22%3A%22Limit%22%2C%22Quantity%22%3A%2220000%22%2C%22Symbol%22%3A%22USDJPY%22%2C%22TradeAction%22%3A%22Buy%22%2C%20%22OrderID%22%3A208033619%7D%0A HTTP/1.1
     Host: api.tradestation.com
 
 Example JSONP Response:

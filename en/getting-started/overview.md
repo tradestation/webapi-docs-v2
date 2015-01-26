@@ -16,7 +16,7 @@ All requests are made via HTTPS URIs that represent objects as a hierarchy of re
 ### Base Uri
 The Base URI used to access TradeStation WebAPI services is: 
 
-* [https://api.tradestation.com/v2](https://api.tradestation.com/v2)
+* [https://[jp-]api.tradestation.com/v2](https://[jp-]api.tradestation.com/v2)
 
 However, you can also reach it via region-specific URI's such as:
 
@@ -41,7 +41,7 @@ Here is a simple example of requesting a list of accounts for a particular user:
 
 #### HTTP Request
 
-    GET https://api.tradestation.com/v2/users/testuser/accounts?apiversion=20101026 HTTP/1.1
+    GET https://[jp-]api.tradestation.com/v2/users/testuser/accounts?apiversion=20101026 HTTP/1.1
     Authorization: token
     Accept: application/json
     Content-Type: application/x-www-form-urlencoded

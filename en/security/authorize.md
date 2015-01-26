@@ -28,7 +28,7 @@ Obtaining authorization to access controlled resources
 
 Example Request: ([Requesting Authorization details](../../getting-started/security-overview/))
 
-    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
     Host: api.trad.tradestation.com
     Content-Length: 610
@@ -76,7 +76,7 @@ Beginning in `v2`, Refresh tokens will be returned with the `security/authorize`
 
 **Example Request:**
 
-    POST https://api.tradestation.com/v2/Security/Authorize HTTP/1.1
+    POST https://[jp-]api.tradestation.com/v2/Security/Authorize HTTP/1.1
     Content-Type: application/x-www-form-urlencoded
     Host: api.trad.tradestation.com
     Content-Length: 610
