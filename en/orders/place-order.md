@@ -62,12 +62,14 @@ Example Request:
     Host: api.tradestation.com
     
     {
-        "OrderConfirmId": "96x0c/Bq00qatgyO+QO4pA",
-        "AccountId": 281994,
+        "OrderConfirmId": "B86D7397-6B2A-4760-ADC6-A6FBA0C31470",
+        "ClientTag": "OrderBar",
+        "AccountId": "281994",
         "AssetType": "Equity",
         "Side": "Buy",
+        "ExchangeCode": "TS",
         "TimeInForce": "DayPlus",
-        "LimitPrice": "0.14",
+        "Price": "0.14",
         "Type": "Limit",
         "Quantity": 5,
         "Route": "Intelligent",
