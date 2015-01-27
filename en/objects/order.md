@@ -7,18 +7,20 @@ permalink: order/
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| OrderConfirmId | string | 25-char max. Must be unique id per order per API Key and User |
+| OrderConfirmId | guid | Must be unique id per order per API Key and User |
+| ClientTag | string | Optional: Client generated unique identifier |
 | AccountId | string | Id of the account used to place the order |
 | Symbol | string | Stock Symbol |
 | Quantity | string | Number of stocks|
 | AssetType | enum | Equity, Option, Future, Forex |
-| LimitPrice | decimal |  |
+| Price | decimal |  |
 | StopPrice | decimal | |
 | Type | enum | Market, Limit, StopLimit, StopMarket |
 | Route | string | |
 | TimeInForce | enum | Day, DayPlus, GoodTillCancel, GoodTillCancelPlus, GoodTillDate, GoodTillDatePlus, GoodTill1Week, GoodTill1Month, GoodTill1Minute, GoodTill3Minute, GoodTill5Minute, GoodTillCrossing, ImmediateOrCancel, FillorKill, AtTheOpening, AtTheClose, AMOnly, PMOnly  |
 | TimeInForceExpiration | date | DateTime with UTC offset |
 | Side | enum | Buy, Sell, Short, SellShortExempt, BuyToOpen, BuyToClose, Genbiki, Genwatashi |
+| ExchangeCode | enum | NYSE, NASDAQ, TS, OSE, NG, HC, FK, SP, JQ, HongKong, Shanghai, Shenzhen, ChiX, JPN, Forex, CME, GR, OutsideMarket, OtherForeignMarket |
 | FundSource | enum | Cash, Margin, StandardMargin, NegotiatedMargin |
 | TaxationMethod | string | Delayed, Calculated |
 | LotSelectionStrategy | enum | FirstInFirstOut, LastInFirstOut |
@@ -27,12 +29,14 @@ permalink: order/
 ### Example JSON
 
     {
-        "OrderConfirmId": "96x0c/Bq00qatgyO+QO4pA",
-        "AccountId": 281994,
+        "OrderConfirmId": "B86D7397-6B2A-4760-ADC6-A6FBA0C31470",
+        "ClientTag": "OrderBar",
+        "AccountId": "281994",
         "AssetType": "Equity",
         "Side": "Buy",
+        "ExchangeCode": "TS",
         "TimeInForce": "DayPlus",
-        "LimitPrice": "0.14",
+        "Price": "0.14",
         "Type": "Limit",
         "Quantity": 5,
         "Route": "Intelligent",
