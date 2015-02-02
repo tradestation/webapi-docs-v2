@@ -49,4 +49,4 @@ tags: JPEQ, balances
 | - StockValue | decimal |  |
 | - TaxRestraint | decimal |  |
 | - TotalCollateral | decimal |  |
-| - RealizedPL | decimal |  |
+
