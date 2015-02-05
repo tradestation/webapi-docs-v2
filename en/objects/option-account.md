@@ -9,6 +9,6 @@ permalink: option-account/
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| Enabled | bool | Account's equity trading status e.g. true, false |
+| Enabled | bool | Account's option trading status e.g. true, false |
 | ApprovalLevel | integer | Option entitlement level that the account is approved for |
 | DayTrading  | [Day Trading](../day-trading) | Data object with Day Trading properties |
