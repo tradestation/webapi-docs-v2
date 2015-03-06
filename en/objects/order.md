@@ -1,6 +1,6 @@
 ---
 layout: en
-title: Order Request
+title: OrderRequest
 category: objects
 permalink: order/
 ---
