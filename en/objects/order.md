@@ -16,14 +16,13 @@ permalink: order/
 | Price | decimal |  |
 | StopPrice | decimal | |
 | Type | enum | Market, Limit, StopLimit, StopMarket |
-| Route | string | |
 | TimeInForce | enum | Day, DayPlus, GoodTillCancel, GoodTillCancelPlus, GoodTillDate, GoodTillDatePlus, GoodTill1Week, GoodTill1Month, GoodTill1Minute, GoodTill3Minute, GoodTill5Minute, GoodTillCrossing, ImmediateOrCancel, FillorKill, AtTheOpening, AtTheClose, AMOnly, PMOnly  |
 | TimeInForceExpiration | date | DateTime with UTC offset |
 | Side | enum | Buy, Sell, Short, SellShortExempt, BuyToOpen, BuyToClose, Genbiki, Genwatashi |
 | ExchangeCode | enum | NYSE, NASDAQ, TS, OSE, NG, HC, FK, SP, JQ, HongKong, Shanghai, Shenzhen, ChiX, JPN, Forex, CME, GR, OutsideMarket, OtherForeignMarket |
 | FundSource | enum | Cash, Margin, StandardMargin, NegotiatedMargin |
 | TaxationMethod | string | Delayed, Calculated |
-| LotSelectionStrategy | enum | FirstInFirstOut, LastInFirstOut |
+| CostBasisMethod | enum | FIFO, LIFO, LargestProfit, LargestLoss |
 | Condition | enum | Basic, OrderSendOrder, OrderCancelOrder, Bracket  |
 
 ### Example JSON
@@ -39,13 +38,12 @@ permalink: order/
         "Price": "0.14",
         "Type": "Limit",
         "Quantity": 5,
-        "Route": "Intelligent",
         "StopPrice": 14.12,
         "Symbol": "JP:8698-TS",
         "TimeInForceExpiration": null,
         "FundSource": "Cash",
         "TaxationMethod": "Calculated",
-        "LotSelectionStrategy": "FirstInFirstOut",
+        "CostBasisMethod" : "FIFO",
         "Condition": "Basic"
     }
     
