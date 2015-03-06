@@ -23,7 +23,7 @@ Requesting position information for a specific position group under a particular
 
 ### Returns
 
-[Position Group](../../objects/position-group) object
+[Position Group](../../objects/position-group) or [Position](../../objects/position) object
 
 ### Errors
 
@@ -52,106 +52,78 @@ Example Response ([Position Group](../../objects/position-group) object details)
     X-Powered-By: ASP.NET
     Date: Tue, 23 Dec 2014 18:18:32 GMT
     
-    [
-      {
-        "GroupId": 1,
-        "Positions": [
-          {
-            "FundSource": {
-              "GroupId": 1,
-              "Commission": 1.0,
-              "CommissionConsumptionTax": 1.0,
-              "ContractExpirationDate": "2014-12-19 17:00:05.270+00:00",
-              "CorporateActionFee": 1.0,
-              "CorporateActionFeeConsumptionTax": 1.0,
-              "ExecutedQuantity": 1.0,
-              "Interest": 1.0,
-              "ManagementFee": 1.0,
-              "ManagementFeeConsumptionTax": 1.0,
-              "MarginLimitCautionFlag": 0,
-              "OnOrderQuantity": 1.0,
-              "OpenQuantity": 1.0,
-              "OpenSettleDate": "2014-12-19 17:00:05.270+00:00",
-              "OpenTradeDate": "2014-12-19 17:00:05.270+00:00",
-              "OpenTradePrice": 1.0,
-              "RealizedGainLoss": 1.0,
-              "ShortInterest": 1.0,
-              "Type": "Margin"
+    [{
+        "GroupId": 104,
+        "TotalPositions": 1,
+        "Positions": [{
+            "Id": 103,
+            "AccountId": "JPEQ10134",
+            "Symbol": "JP:5012-TS",
+            "Asset": {
+                "Type": "Equity"
             },
-            "Id": 1,
-            "AccountId": "1234",
-            "Symbol": "JP:8698-TS",
-            "AssetType": "Equity",
-            "ExchangeCode": "TYO",
-            "TaxationMethod": "Calculated",
-            "CountryCode": "JP",
-            "Currency": "¥",
-            "TotalQuantity": 500.0
-          },
-          {
+            "ExchangeCode": "TS",
             "FundSource": {
-              "GroupId": 1,
-              "Commission": 2.0,
-              "CommissionConsumptionTax": 2.0,
-              "ContractExpirationDate": "2014-12-19 17:00:05.270+00:00",
-              "CorporateActionFee": 2.0,
-              "CorporateActionFeeConsumptionTax": 2.0,
-              "ExecutedQuantity": 2.0,
-              "Interest": 2.0,
-              "ManagementFee": 2.0,
-              "ManagementFeeConsumptionTax": 2.0,
-              "MarginLimitCautionFlag": 0,
-              "OnOrderQuantity": 2.0,
-              "OpenQuantity": 2.0,
-              "OpenSettleDate": "2014-12-19 17:00:05.270+00:00",
-              "OpenTradeDate": "2014-12-19 17:00:05.270+00:00",
-              "OpenTradePrice": 2.0,
-              "RealizedGainLoss": 2.0,
-              "ShortInterest": 2.0,
-              "Type": "Margin"
+                "GroupId": 104,
+                "Commission": 15030,
+                "CommissionConsumptionTax": 1202,
+                "ContractExpirationDate": "2015-07-07 00:00:00.000+00:00",
+                "CorporateActionFee": 0,
+                "CorporateActionFeeConsumptionTax": 0,
+                "ExecutedQuantity": 0,
+                "Interest": 29977,
+                "ManagementFee": 1000,
+                "ManagementFeeConsumptionTax": 80,
+                "MarginLimitCautionFlag": 0,
+                "OnOrderQuantity": 0,
+                "OpenQuantity": 0,
+                "OpenSettleDate": "2015-01-13 00:00:00.000+00:00",
+                "OpenTradeDate": "2015-01-07 00:00:00.000+00:00",
+                "OpenTradePrice": 1002,
+                "RealizedGainLoss": 0,
+                "ShortInterest": 0,
+                "Type": "Margin"
             },
-            "Id": 2,
-            "AccountId": "1234",
-            "Symbol": "JP:8698-TS",
-            "AssetType": "Equity",
-            "ExchangeCode": "TYO",
             "TaxationMethod": "Calculated",
-            "CountryCode": "JP",
-            "Currency": "¥",
-            "TotalQuantity": 500.0
-          }
-        ],
-        "FundSource": {
-          "Commission": 3.0,
-          "CommissionConsumptionTax": 3.0,
-          "CorporateActionFee": 3.0,
-          "CorporateActionFeeConsumptionTax": 3.0,
-          "Interest": 3.0,
-          "ManagementFee": 3.0,
-          "ManagementFeeConsumptionTax": 3.0,
-          "OnOrderQuantity": 3.0,
-          "RealizedGainLoss": 3.0,
-          "ShortInterest": 3.0,
-          "Type": "Margin"
+            "CountryCode": "",
+            "Currency": "",
+            "TotalQuantity": 10000,
+            "AvailableQuantity": 10000
+        }],
+        "AccountId": "JPEQ10134",
+        "Symbol": "JP:5012-TS",
+        "Asset": {
+            "Type": "Equity"
         },
-        "AccountId": "1234",
-        "Symbol": "JP:8698-TS",
-        "AssetType": "Equity",
-        "ExchangeCode": "TYO",
+        "ExchangeCode": "TS",
+        "FundSource": {
+            "Commission": 15030,
+            "CommissionConsumptionTax": 1202,
+            "CorporateActionFee": 0,
+            "CorporateActionFeeConsumptionTax": 0,
+            "Interest": 29977,
+            "ManagementFee": 1000,
+            "ManagementFeeConsumptionTax": 80,
+            "OnOrderQuantity": 0,
+            "RealizedGainLoss": 0,
+            "ShortInterest": 0,
+            "Type": "Margin"
+        },
         "TaxationMethod": "Calculated",
-        "CountryCode": "JP",
-        "Currency": "¥",
-        "TotalQuantity": 1000.0,
-        "AveragePrice": 0.0,
+        "CountryCode": "",
+        "Currency": "",
+        "TotalQuantity": 10000,
+        "AvailableQuantity": 10000,
+        "AveragePrice": 1002,
         "Quote": {
-          "PreviousClose": 1000.0,
-          "PreviousCloseDelta": 5.0,
-          "PreviousCloseDeltaPercent": 0.05,
-          "Last": 1000.0,
-          "Ask": 1005.0,
-          "Bid": 995.0,
-          "Symbol": "JP:8698-TS",
-          "Description": "This is a test description for JP:8698-TS"
+            "DisplayType": 1,
+            "PreviousClose": 1149,
+            "PreviousCloseDelta": -170,
+            "PreviousCloseDeltaPercent": -14.795474325500436,
+            "Last": 979,
+            "Ask": 980,
+            "Bid": 979,
+            "Symbol": "JP:5012-TS",
+            "Description": "東燃ゼネラル石油"
         }
-      }
-    ]
+    }]
