@@ -19,7 +19,7 @@ Resource for placing orders
   * none
 * Request Body:
 
-  * [Order](../../objects/order) object serialized in JSON or XML
+  * [Order Request](../../objects/order) object serialized in JSON or XML
 
 *JSONP*
 
@@ -27,7 +27,7 @@ Resource for placing orders
 
   * none
 * Query String Parameters
-  * data = URL Encoded JSON serialized [Order](../../objects/order) object
+  * data = URL Encoded JSON serialized [Order Request](../../objects/order) object
   * callback = jQuery method to callback
   * oauth_token = AccessToken
 * URL:
@@ -39,7 +39,7 @@ Resource for placing orders
 
 ### Returns    
 
-A collection of the [Order Result](../../objects/order-result) object
+A collection of the [Order Response](../../objects/order-result) object
 
 ### Errors
 
@@ -72,13 +72,12 @@ Example Request:
         "Price": "0.14",
         "Type": "Limit",
         "Quantity": 5,
-        "Route": "Intelligent",
         "StopPrice": 14.12,
         "Symbol": "JP:8698-TS",
         "TimeInForceExpiration": null,
         "FundSource": "Cash",
         "TaxationMethod": "Calculated",
-        "LotSelectionStrategy": "FirstInFirstOut",
+        "CostBasisMethod" : "FIFO",
         "Condition": "Basic"
     }
 
@@ -89,8 +88,13 @@ Example Response:
     Content-Type: application/json; charset=utf-8
     
     [{
-        "Message": "Sent order: Buy 5 JP:8698-TS",
+        "OrderConfirmId": "B86D7397-6B2A-4760-ADC6-A6FBA0C31470",
         "Id": 207887693,
-        "Status": "Success"
+        "Status": "Success",
+        "Orders": [
+        {
+           "Id": "216420"
+        }
+        ]
     }]
 
