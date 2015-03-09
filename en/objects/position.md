@@ -23,5 +23,4 @@ permalink: position/
 | MarketValue           | decimal | Total Market Value of held position |
 | OpenDateTime          | datetime | Open date time with UTC offset |
 | Quote                 | [Quote](../quote) | Data object with quote properties |
-| FundSource            | enum | Cash, Margin, StandardMargin, NegotiatedMargin |
-
+| FundSource            | [Fund Source](../fund-source) | Data object with fund source properties |

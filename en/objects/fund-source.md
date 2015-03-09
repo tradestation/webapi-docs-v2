@@ -24,7 +24,7 @@ permalink: fund-source/
 | OpenSettleDate			| datetimeoffset  | Applicable to Margin only |
 | OpenTradeDate			| datetimeoffset  | Applicable to Margin only |
 | OpenTradePrice			| decimal  | Applicable to Margin only |
-| RealizedGainLoss			| decimal  | Applicable to Margin only |
+| RealizedProfitoss			| decimal  | Applicable to Margin only |
 | ShortInterest			| decimal  | Applicable to Margin only |
 
 

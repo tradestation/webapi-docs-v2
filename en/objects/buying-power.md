@@ -40,8 +40,8 @@ tags: JPEQ, balances
 | - MarginRequirement | decimal |  |
 | - MarginUnrealizedProfitLoss | decimal |  |
 | - RealizedLoss | decimal |  |
-| - RealizedPL | decimal |  |
-| - RealizedGain | decimal |  |
+| - RealizedProfit | decimal |  |
+| - RealizedProfitLoss | decimal |  |
 | - SellOrderValue | decimal |  |
 | - ShortClosingOrderValue | decimal |  |
 | - ShortOrderValue | decimal |  |
@@ -49,4 +49,4 @@ tags: JPEQ, balances
 | - StockValue | decimal |  |
 | - TaxRestraint | decimal |  |
 | - TotalCollateral | decimal |  |
-| - RealizedProfitLoss | decimal |  |
+
