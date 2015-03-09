@@ -18,8 +18,8 @@ permalink: position/
 | Currency              | string  | Denomination that symbol trades in |
 | TotalQuantity         | decimal | Quantity of shares held in position |
 | AveragePrice          | decimal | Average Price of position held |
-| UnrealizedGainLoss    | decimal | Unrealized Gain or Loss |
-| UnrealizedGainLossPercent       | decimal | Unrealized Gain or Loss Precentage |
+| UnrealizedProfitLoss  | decimal | Unrealized Gain or Loss |
+| UnrealizedProfitLossPercent       | decimal | Unrealized Gain or Loss Precentage |
 | MarketValue           | decimal | Total Market Value of held position |
 | OpenDateTime          | datetime | Open date time with UTC offset |
 | Quote                 | [Quote](../quote) | Data object with quote properties |
