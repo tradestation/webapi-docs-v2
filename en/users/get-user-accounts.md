@@ -50,7 +50,7 @@ Example Response: ([Account Info](../../objects/account-info) object details)
     X-Powered-By: ASP.NET
     Date: Thu, 06 Jan 2011 17:21:43 GMT
     
-[{
+    [{
     "Id": "JPEQ10134",
     "AccountDisplayName": "150-10134",
     "Status": "Open",
@@ -62,4 +62,4 @@ Example Response: ([Account Info](../../objects/account-info) object details)
     "Status": "Open",
     "AllowedFundSources": ["Cash", "StandardMargin", "NegotiatedMargin"],
     "AllowedAssets": ["Equity"]
-}]
+    }]
