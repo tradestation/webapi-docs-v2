@@ -21,7 +21,7 @@ Requesting position information for a particular account
 
 ### Returns
 
-[Position](../../objects/position) object
+[Position](../../objects/position) or [PositionGroup](../../objects/position-group) (derived from Position) object
 
 ### Results Filter
 
@@ -58,57 +58,71 @@ Example Response ([Position](../../objects/position) object details):
     X-Powered-By: ASP.NET
     Date: Tue, 23 Dec 2014 18:18:32 GMT
     
-    [
-      {
-        "FundSource": {
-        "Type": "Cash"
-        },
-        "Id": 1,
-        "AccountId": "1234",
-        "AccountDisplayName": "Test Account Display Name",
-        "Symbol": "JP:8698-TS",
-        "AssetType": "Equity",
-        "ExchangeCode": "TYO",
-        "TaxationMethod": "Calculated",
-        "Direction": "Long",
-        "CountryCode": "JP",
-        "Currency": "¥",
-        "TotalQuantity": 500.0,
-        "AveragePrice": 242.0,
-        "UnrealizedGainLoss": 10.0,
-        "UnrealizedGainLossPercent": 1.0,
-        "MarketValue": 100.0,
-        "OpenDateTime": "2014-12-22 19:52:32.080+00:00"
-      },
-      {
-        "FundSource": {
-        "Type": "Cash"
-        },
-        "Id": 2,
-        "AccountId": "1234",
-        "AccountDisplayName": "Test Account Display Name",
-        "Symbol": "JP:1722-TS",
-        "AssetType": "Equity",
-        "ExchangeCode": "TYO",
-        "TaxationMethod": "Calculated",
-        "Direction": "Long",
-        "CountryCode": "JP",
-        "Currency": "¥",
-        "TotalQuantity": 100.0,
-        "AveragePrice": 1028.0,
-        "UnrealizedGainLoss": 10.0,
-        "UnrealizedGainLossPercent": 1.0,
-        "MarketValue": 100.0,
-        "OpenDateTime": "2014-12-22 19:52:32.080+00:00",
-        "Quote": {
-          "PreviousClose": 100.0,
-          "PreviousCloseDelta": 5.0,
-          "PreviousCloseDeltaPercent": 0.05,
-          "Last": 100.0,
-          "Ask": 105.0,
-          "Bid": 95.0,
-          "Symbol": "JP:1722-TS",
-          "Description": "This is a test description for JP:1722-TS"
+       [{
+            "Id": 3,
+            "AccountId": "JPEQ10134",
+            "Symbol": "JP:5008-TS",
+            "Asset": {
+                "Type": "Equity"
+            },
+            "FundSource": {
+                "Type": "Cash"
+            },
+            "TaxationMethod": "Calculated",
+            "Direction": "Long",
+            "CountryCode": "",
+            "Currency": "JPY",
+            "TotalQuantity": 10000,
+            "AvailableQuantity": 10000,
+            "AveragePrice": 184,
+            "Quote": {
+                "DisplayType": 1,
+                "PreviousClose": 154,
+                "PreviousCloseDelta": 1,
+                "PreviousCloseDeltaPercent": 0.6493506493506493,
+                "Last": 155,
+                "Ask": 155,
+                "Bid": 154,
+                "Symbol": "JP:5008-TS",
+                "Description": "東亜石油"
+            }
+        }, {
+            "GroupId": 55,
+            "TotalPositions": 11,
+            "AccountId": "JPEQ10134",
+            "Symbol": "JP:6629-TS",
+            "Asset": {
+                "Type": "Equity"
+            },
+            "ExchangeCode": "JQ",
+            "FundSource": {
+                "Commission": 1641,
+                "CommissionConsumptionTax": 132,
+                "CorporateActionFee": 0,
+                "CorporateActionFeeConsumptionTax": 0,
+                "Interest": 862,
+                "ManagementFee": 100,
+                "ManagementFeeConsumptionTax": 8,
+                "OnOrderQuantity": 0,
+                "RealizedGainLoss": 0,
+                "ShortInterest": 0,
+                "Type": "Margin"
+            },
+            "TaxationMethod": "Calculated",
+            "CountryCode": "",
+            "Currency": "",
+            "TotalQuantity": 1954,
+            "AvailableQuantity": 1954,
+            "AveragePrice": 191.6,
+            "Quote": {
+                "DisplayType": 0,
+                "PreviousClose": 0,
+                "PreviousCloseDelta": 0,
+                "PreviousCloseDeltaPercent": 0,
+                "Last": 0,
+                "Ask": 0,
+                "Bid": 0,
+                "Symbol": "JP:6629-TS"
+            }
         }
-       }
-    ]
+    }]

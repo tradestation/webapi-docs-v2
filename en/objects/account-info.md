@@ -7,21 +7,11 @@ permalink: account-info/
 
 | Field | Type | Description |
 | ----- | ---- | ----------- |
-| Alias | string | User defined name |
-| AltId | string | TradeStation Alternative ID |
-| DisplayName | string | Set to AltId (TradeStation Alternate ID) if it exists, otherwise will be the Account Name |
-| Key | integer | Account identifier |
-| Name | string | Name of account |
-| Type | string | Account Type: C, M, F, X, D, J |
-| TypeDescription | string | Account Type Description |
+| Id | string |  Unique identifier for an account |
+| AccountDisplayName | string | Account Name |
+| Status | enum | Open, Close |
+| Restrictions | enum | Restrictions applicable to this account e.g. MarginCall, LiquidatingTransactionOnly, ClosingTransactionOnly, NintyDaysClosingTransactionOnly |
+| AllowedFundSources | enum | Fund sources the account is allowed to use e.g. Cash, Margin, StandardMargin, NegotiatedMargin |
+| AllowedAssets | enum | Assets the account is allowed to trade e.g. Equity, Option, Future, Forex |
 
-
-Account Type/TypeDescription:
-
-* C = Cash
-* M = Margin
-* F = Futures
-* X = Forex
-* D = DVP
-* J = JPEQ
 

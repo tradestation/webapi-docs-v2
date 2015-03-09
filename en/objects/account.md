@@ -11,6 +11,7 @@ permalink: account/
 | AccountDisplayName | string | Account Display Name |
 | Status | enum | Current status of the account: Open, Close |
 | Restrictions | enum | Restrictions applicable to this account e.g. MarginCall, LiquidatingTransactionOnly, ClosingTransactionOnly, NintyDaysClosingTransactionOnly |
+| Currency | string | Currency |
 | AllowedFundSources | enum | Fund sources the account is allowed to use e.g. Cash, Margin, StandardMargin, NegotiatedMargin |
 | AllowedAssets | enum | Assets the account is allowed to trade e.g. Equity, Option, Future, Forex |
 | MarketValue | decimal | Sum of market values for currently held positions |

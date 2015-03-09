@@ -8,5 +8,6 @@ permalink: position-group/
 | Field                 | Type    | Description |
 | --------------------- | ------- | ----------- |
 | GroupId				| long    | Position Group key |
-| Position | [Position](../position) | Data object with position properties |
+| TotalPositions		| int     | Number of total Positions |
+| Positions             | [Position](../position) | Data object with position properties |
 

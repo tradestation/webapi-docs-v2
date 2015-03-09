@@ -59,9 +59,10 @@ Example Response: ([Account](../../objects/account) object)
     Date: Tue, 23 Dec 2014 17:27:36 GMT
 
     [{
-        "Id": "1234",
+        "Id": "JPEQ10134",
         "AccountDisplayName": "1234 Display Name",
         "Status": "Open",
+        "Currency": "JPY",
         "Restrictions": [
           "MarginCall"
         ],
@@ -89,7 +90,40 @@ Example Response: ([Account](../../objects/account) object)
           "MarginUnrealizedPL": 7100.0,
           "StockValue": 11000.0
         },
-        "RealTimeBuyingPower": {}
+        "RealTimeBuyingPower": {
+          "AssetValue": 1010576218,
+          "BuyOrderValue": 0,
+          "CashAvailableForWithdrawalTPlus1": 803415870,
+          "CashAvailableForWithdrawalTPlus2": 803415870,
+          "CashAvailableForWithdrawalTPlus3": 803415870,
+          "CashBalance": 889725058,
+          "CashBuyingPower": 889725058,
+          "CashUnrealizedPL": 8175570,
+          "ClosedMarginPositionCost": 0,
+          "Commission": 0,
+          "LongClosingOrderValue": 0,
+          "LongOrderValue": 0,
+          "MarginBuyingPower": 2678052900,
+          "MarginCashRequirement": 0,
+          "MarginExcess": 798388098,
+          "MarginExpense": 1201549,
+          "MarginMaintenanceRatio": 2.166334461097783,
+          "MarginPositionOpeningCost": 283692120,
+          "MarginRequirement": 90135411,
+          "MarginUnrealizedPL": 2310560,
+          "MutualFundCollateral": 0,
+          "RealizedLoss": 0,
+          "RealizedPL": 0,
+          "RealizedProfit": 0,
+          "SellOrderValue": 0,
+          "ShortClosingOrderValue": 0,
+          "ShortOrderValue": 0,
+          "StockCollateral": 0,
+          "StockValue": 118540600,
+          "TaxRestraint": 0,
+          "TotalCollateral": 0
+
+        }
       }]
 
 
