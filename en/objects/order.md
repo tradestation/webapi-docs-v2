@@ -13,7 +13,7 @@ permalink: order/
 | Symbol | string | Stock Symbol |
 | Quantity | string | Number of stocks|
 | AssetType | enum | Equity, Option, Future, Forex |
-| Price | decimal |  |
+| LimitPrice | decimal |  |
 | StopPrice | decimal | |
 | Type | enum | Market, Limit, StopLimit, StopMarket |
 | TimeInForce | enum | Day, DayPlus, GoodTillCancel, GoodTillCancelPlus, GoodTillDate, GoodTillDatePlus, GoodTill1Week, GoodTill1Month, GoodTill1Minute, GoodTill3Minute, GoodTill5Minute, GoodTillCrossing, ImmediateOrCancel, FillorKill, AtTheOpening, AtTheClose, AMOnly, PMOnly  |
@@ -35,7 +35,7 @@ permalink: order/
         "Side": "Buy",
         "ExchangeCode": "TS",
         "TimeInForce": "DayPlus",
-        "Price": "0.14",
+        "LimitPrice": "0.14",
         "Type": "Limit",
         "Quantity": 5,
         "StopPrice": 14.12,
