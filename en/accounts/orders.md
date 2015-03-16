@@ -85,6 +85,7 @@ Example Response ([Order Detail](../../objects/order-detail) object details)
         ExchangeDateTime: "2014-12-18 11:21:25.948+00:00",
         ExchangeCode: "TYO",
         Status: "Filled",
+		StatusDateTime: "2014-12-18 11:21:25.940+00:00",
         ExecutedQuantity: 100,
         RemainingQuantity: 0,
         AverageExecutedPrice: 235,

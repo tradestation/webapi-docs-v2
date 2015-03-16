@@ -69,7 +69,7 @@ Example Request:
         "Side": "Buy",
         "ExchangeCode": "TS",
         "TimeInForce": "DayPlus",
-        "Price": "0.14",
+        "LimitPrice": "0.14",
         "Type": "Limit",
         "Quantity": 5,
         "StopPrice": 14.12,
